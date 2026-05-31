@@ -14,11 +14,6 @@ Full-stack MERN application for influencer analytics, campaign management, and A
 ## 🚀 How to Run the Project
 
 ### 1. Clone the repository
-```bash
-git clone https://github.com/YOUR_USERNAME/RateInfluencer.git
-cd RateInfluencer
-````
-
 ---
 
 ### 2. Start Backend
