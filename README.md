@@ -57,19 +57,4 @@ npm run dev
 
 ---
 
-## ⚠️ Important
 
-* Do NOT upload `.env` to GitHub
-* Make sure backend runs before frontend API calls
-
----
-
-```
-
----
-
-If you want next step, I can make it:
-✔ :contentReference[oaicite:0]{index=0}  
-✔ :contentReference[oaicite:1]{index=1}  
-✔ or :contentReference[oaicite:2]{index=2}
-```
