@@ -11,16 +11,16 @@ const app = express();
 
 /*
   ✅ CORS FIX (PRODUCTION SAFE)
-  Replace with your frontend URL (Vercel)
+  Make sure your CURRENT Vercel URL is here
 */
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://rate-influencer-cgd0q9eqh-vhatkarajinkya07-creators-projects.vercel.app"
+  "https://rate-influencer-mu.vercel.app"
 ];
 
 app.use(cors({
   origin: function (origin, callback) {
-    // allow tools like Postman
+    // allow server-to-server or tools like Postman
     if (!origin) return callback(null, true);
 
     if (allowedOrigins.includes(origin)) {
@@ -33,9 +33,12 @@ app.use(cors({
   credentials: true
 }));
 
-// IMPORTANT: handle preflight requests
+// Handle preflight requests
 app.options("*", cors());
 
+/*
+  Middleware
+*/
 app.use(express.json());
 
 /*
@@ -50,7 +53,7 @@ app.use("/api/ai", aiRoutes);
   Error handler
 */
 app.use((err, _req, res, _next) => {
-  console.error("Error:", err);
+  console.error("Server Error:", err);
   res.status(500).json({
     success: false,
     error: err.message || "Internal server error"
@@ -58,7 +61,7 @@ app.use((err, _req, res, _next) => {
 });
 
 /*
-  Start server
+  Start server (Render requires this)
 */
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
