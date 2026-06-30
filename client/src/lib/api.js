@@ -25,3 +25,4 @@ export const aiGenerateContent = (body) =>
   api.post("/ai/generate-content", body).then((r) => r.data);
 export const aiPredictVirality = (body) =>
   api.post("/ai/predict-virality", body).then((r) => r.data);
+
