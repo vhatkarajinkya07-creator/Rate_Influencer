@@ -15,7 +15,7 @@ const app = express();
 */
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://rate-influencer-mu.vercel.app"
+  "https://rate-influencer-git-main-vhatkarajinkya07-creators-projects.vercel.app"
 ];
 
 app.use(cors({
