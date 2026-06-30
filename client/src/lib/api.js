@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const api = axios.create({ baseURL: "" });
+const api = axios.create({ baseURL: "https://rateinfluencer-api.onrender.com" });
 
 // Influencers
 export const getInfluencers = () => api.get("/influencers").then((r) => r.data);
