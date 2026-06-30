@@ -8,6 +8,9 @@ import ContentStudio from "./pages/ContentStudio.jsx";
 import CampaignPage from "./pages/Campaign.jsx";
 import Virality from "./pages/Virality.jsx";
 
+
+console.log("API BASE URL:", import.meta.env.VITE_API_URL);
+
 export default function App() {
   return (
     <AppProvider>
