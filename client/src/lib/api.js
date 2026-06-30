@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const api = axios.create({ baseURL: "/api" });
+const api = axios.create({ baseURL: "/" });
 
 // Influencers
 export const getInfluencers = () => api.get("/influencers").then((r) => r.data);
